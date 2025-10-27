@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERENTY</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/logo.jpg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                 <h1>VERENTY</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link" data-tab="t-shirts">Футболки</a></li>
+                    <li><a href="#" class="nav-link" data-tab="hoodies">Кофты</a></li>
+                    <li><a href="#" class="nav-link" data-tab="pants">Штаны</a></li>
+                    <li><a href="#" class="nav-link" data-tab="about">О нас</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="cartBtn">
+                🛒 <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Футболки -->
+            <div id="t-shirts" class="tab-content active">
+                <h2>Футболки</h2>
+                <div class="products-grid">
+                    
+                    <div class="product-card">
+                        <div class="product-slider">
+                            <div class="slider-container">
+                                <div class="slide active"><img src="img/t-shirt4.PNG" alt="MONEY CLUB"></div>
+                                <div class="slide"><img src="img/size.PNG" alt="MONEY CLUB"></div>
+                                <div class="slide"><img src="img/t-shirt41.PNG" alt="MONEY CLUB"></div>
+                                <div class="slide"><img src="img/t-shirt42.PNG" alt="MONEY CLUB"></div>
+                                <div class="slide"><img src="img/t-shurt43.PNG" alt="MONEY CLUB"></div>
+                            </div>
+                            <button class="slider-btn prev">‹</button>
+                            <button class="slider-btn next">›</button>
+                            <div class="slider-dots"></div>
+                        </div>
+                        <h3>MONEY CLUB</h3>
+                        <div class="size-selector">
+                            <h4>70 руб</h4>
+                            <label>Размер:</label>
+                            <select>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                 <option value="XL">XL</option>
+                            </select>
+                            
+                        </div>
+                        <button class="preorder-btn" data-product="MONEY CLUB">Предзаказ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кофты -->
+            <div id="hoodies" class="tab-content">
+                <div class="soon-container">
+                    <div class="soon-content">
+                        <div class="soon-icon">👕</div>
+                        <div class="soon-text">SOON</div>
+                        <p>Новая коллекция кофт уже в разработке</p>
+                        <div class="countdown">
+                            <div class="countdown-item">
+                                <span class="countdown-number">XX</span>
+                                <span class="countdown-label">дней</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number">XX</span>
+                                <span class="countdown-label">часов</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number">XX</span>
+                                <span class="countdown-label">минут</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Штаны -->
+            <div id="pants" class="tab-content">
+                <div class="soon-container">
+                    <div class="soon-content">
+                        <div class="soon-icon">👖</div>
+                        <div class="soon-text">SOON</div>
+                        <p>Эксклюзивные штаны скоро в продаже</p>
+                        <div class="countdown">
+                            <div class="countdown-item">
+                                <span class="countdown-number">XX</span>
+                                <span class="countdown-label">дней</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number">XX</span>
+                                <span class="countdown-label">часов</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number">XX</span>
+                                <span class="countdown-label">минут</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- О нас -->
+            <div id="about" class="tab-content">
+                <div class="about-container">
+                    <h2>О нас</h2>
+                    <p>culture club - это про сообщество молодых и амбициозных парней, которые просыпаются сразу с огнем в глазах и поставленной целью, свой открытый клуб который доступен каждому, вещи которые показывают, что весь мир уже твой, время делать.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно корзины -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Корзина</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <p>Итого: <span id="cartTotal">0</span> руб.</p>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно заказа -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ваш заказ</h2>
+            <div id="orderInfo"></div>
+            <p>Напиши менеджеру @manag3r_www и скиньте номер заказа</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
