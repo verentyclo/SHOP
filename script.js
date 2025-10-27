@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const orderInfo = document.getElementById('orderInfo');
 
     // Загрузка данных с защитой
-    let cart = JSON.parse(localStorage.getItem('VERENTE_cart')) || [];
+    let cart = JSON.parse(localStorage.getItem('VERENTY_cart')) || [];
     
     if (cartCount) {
         cartCount.textContent = cart.length;
@@ -674,4 +674,5 @@ ${orderDetails}
     if (cartBtn && cartModal) {
         updateCartDisplay();
     }
+
 });
