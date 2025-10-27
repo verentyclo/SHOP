@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     timestamp: new Date().getTime()
                 });
                 
-                localStorage.setItem('VERENTE_cart', JSON.stringify(cart));
+                localStorage.setItem('VERENTY_cart', JSON.stringify(cart));
                 if (cartCount) {
                     cartCount.textContent = cart.length;
                 }
@@ -676,3 +676,4 @@ ${orderDetails}
     }
 
 });
+
