@@ -241,12 +241,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const size = sizeSelect ? sizeSelect.value : 'M';
                 
                 // Определяем цену в зависимости от товара
-                let price = 70; // цена по умолчанию для футболок
+                let price = 60; // цена по умолчанию для футболок
                 if (productName.includes('SEXUAL')) {
-                    price = 170; // цена для кофт
+                    price = 150; // цена для кофт
                 }
                 if (productName.includes('MONEY')) {
-                    price = 170; // цена для кофт
+                    price = 150; // цена для кофт
                 }
                 
                 cart.push({
@@ -684,3 +684,4 @@ ${orderDetails}
         updateCartDisplay();
     }
 });
+
